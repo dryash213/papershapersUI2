@@ -1,0 +1,45 @@
+server {
+    listen 80;
+    server_name papershapers.in;
+
+    root /home/ubuntu/papershaper/dist;
+    index index.html;
+   
+    location = /favicon.ico {
+        access_log off;
+        log_not_found off;
+        expires 1d;
+    }
+   
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /api/ {
+        proxy_pass https://vogyb0pn35.execute-api.ap-south-1.amazonaws.com/test1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen 80;
+    server_name papershapers.in;
+
+    root /home/ubuntu/papershaper/dist;
+    index index.html;
+
+    location / {
+       try_files $uri /index.html;
+    }
+
+    location /api/ {
+        proxy_pass https://vogyb0pn35.execute-api. ap-south-1.amazonaws.com/test1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}

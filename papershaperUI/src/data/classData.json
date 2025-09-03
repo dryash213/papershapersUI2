@@ -1,0 +1,304 @@
+{
+  "Class 10th": {
+    "subjects": ["Science", "Sst", "Maths", "English-First Flight"],
+    "chapters": {
+      "Science": [
+        "chapter-1 Chemical Reactions",
+        "chapter-2 Acids, Bases",
+        "chapter-3 Metals and Non-metals",
+        "chapter-5 Periodic Classification",
+        "chapter-6 Life Processes",
+        "chapter-7 Control and Coordination",
+        "chapter-8 How do Organisms",
+        "chapter-9 Heredity and Evolution",
+        "chapter-10 Light – Reflection and Refraction",
+        "chapter-11 The Human Eye and the Colourful World",
+        "chapter-12 Electricity",
+        "chapter-13 Magnetic Effects of Electric Current",
+        "chapter-15 Our Environment"
+      ],
+      "Sst": [
+        "ncert-book-class-10-geography-chapter-1-in-english",
+        "ncert-book-class-10-geography-chapter-2-in-english",
+        "ncert-book-class-10-geography-chapter-3-in-english",
+        "ncert-book-class-10-geography-chapter-4-in-english",
+        "ncert-book-class-10-geography-chapter-5-in-english",
+        "ncert-book-class-10-geography-chapter-6-in-english",
+        "ncert-book-class-10-geography-chapter-7-in-english",
+        "ncert-book-class-10-economics-chapter-1-in-english",
+        "ncert-book-class-10-economics-chapter-2-in-english",
+        "ncert-book-class-10-economics-chapter-3-in-english",
+        "ncert-book-class-10-economics-chapter-4-in-english",
+        "ncert-book-class-10-economics-chapter-5-in-english",
+        "ncert-book-class-10-political-science-chapter-1-in-english",
+        "ncert-book-class-10-political-science-chapter-2-in-english",
+        "ncert-book-class-10-political-science-chapter-3-in-english",
+        "ncert-book-class-10-political-science-chapter-4-in-english",
+        "ncert-book-class-10-political-science-chapter-5-in-english",
+        "ncert-book-class-10-political-science-chapter-6-in-english",
+        "ncert-book-class-10-political-science-chapter-7-in-english",
+        "ncert-book-class-10-political-science-chapter-8-in-english",
+        "ncert-book-class-10-social-science-history-chapter-1-in-english",
+        "ncert-book-class-10-social-science-history-chapter-2-in-english",
+        "ncert-book-class-10-social-science-history-chapter-3-in-english",
+        "ncert-book-class-10-social-science-history-chapter-4-in-english",
+        "ncert-book-class-10-social-science-history-chapter-5-in-english"
+      ],
+      "Maths": [
+        "Chapter 1 Real Numbers",
+        "Chapter 2 Polynomials",
+        "Chapter 3 Pair of Linear Equations in Two Variables",
+        "Chapter 4 Quadratic Equations",
+        "Chapter 5 Arithmetic Progression",
+        "Chapter 6 Triangles",
+        "Chapter 7 Coordinate Geometry",
+        "Chapter 8 Introduction to Trigonometry",
+        "Chapter 9 Some Applications of Trigonometry",
+        "Chapter 10 Circles",
+        "Chapter 11 Areas Related to Circles",
+        "Chapter 12 Surface Areas and Volumes",
+        "Chapter 13 Statistics",
+        "Chapter 14 Probability"
+      ],
+      "English-First Flight": [
+        "A Letter to God",
+        "From the Diary of Anne Frank",
+        "Glimpses of India",
+        "Madam Rides the Bus",
+        "Mijbil the Otter",
+        "The Proposal",
+        "The Sermon at Benares",
+        "Two Stories about Flying"
+      ]
+    }
+  },
+  "Class 9th": {
+    "subjects": [
+      "Science",
+      "English-Words and Expressions",
+      "Sst",
+      "Maths",
+      "English-Moments"
+    ],
+    "chapters": {
+      "Science": [
+        "Chapter 1. Matter in Our Surroundings",
+        "Chapter 2. Is Matter Around Us Pure",
+        "Chapter 3. Atoms and Molecules",
+        "Chapter 4. Structure of the Atom",
+        "Chapter 5. The Fundamental Unit of Life",
+        "Chapter 6. Tissues",
+        "Chapter 7. Motion",
+        "Chapter 8. Force and Laws of Motion",
+        "Chapter 9. Gravitation",
+        "Chapter 10. Work and Energy",
+        "Chapter 11. Sound",
+        "Chapter 12. Improvement in Food Resources"
+      ],
+      "English-Words and Expressions": [
+        "Unit1",
+        "Unit2",
+        "Unit3",
+        "Unit4",
+        "Unit5",
+        "Unit6",
+        "Unit7",
+        "Unit8",
+        "Unit9"
+      ],
+      "Sst": [
+        "cbse-class-9-geo-chapter-1 India – Size and Location",
+        "cbse-class-9-geo-chapter-2 Physical Features of India",
+        "cbse-class-9-geo-chapter-3 Drainage",
+        "cbse-class-9-geo-chapter-4 Climate",
+        "cbse-class-9-geo-chapter-5 Natural Vegetation and WildLife",
+        "cbse-class-9-geo-chapter-6 Population",
+        "cbse-class-9-eco-Chapter 1 The Story of Village Palampur",
+        "cbse-class-9-eco-Chapter 2 People as Resource",
+        "cbse-class-9-eco-Chapter 3 Poverty as a Challenge",
+        "cbse-class-9-eco-Chapter 4 Food Security in India",
+        "cbse-class-9-history-chapter-1 The French Revolution",
+        "cbse-class-9-history-chapter-2 Socialism in Europe and the Russian Revolution",
+        "cbse-class-9-history-chapter-3 Nazism and the Rise of Hitler",
+        "cbse-class-9-history-chapter-4 Forest Society and Colonialism",
+        "cbse-class-9-history-chapter-5 Pastoralists in the Modern World",
+        "cbse-class-9-pol-Chapter 1 What is Democracy Why Democracy",
+        "cbse-class-9-pol-Chapter 2 Constitutional Design",
+        "cbse-class-9-pol-Chapter 3 Electoral Politics",
+        "cbse-class-9-pol-Chapter 4 Working of Institutions",
+        "cbse-class-9-pol-Chapter 5 Democratic Rights"
+      ],
+      "Maths": [
+        "Chapter 1. Number System",
+        "Chapter 2. Polynomials",
+        "Chapter 3. Coordinate Geometry",
+        "Chapter 4. Linear Equations in Two Variables",
+        "Chapter 5. Introduction to Euclid’s Geometry",
+        "Chapter 6. Lines and Angles",
+        "Chapter 7. Triangles",
+        "Chapter 8. Quadrilaterals",
+        "Chapter 9. Circles",
+        "Chapter 10. Heron’s Formula",
+        "Chapter 11. Surface Areas and Volumes",
+        "Chapter 12. Statistics"
+      ],
+      "English-Moments": [
+        "The Lost Child",
+        "The Adventures of Toto",
+        "Iswaran the Storyteller",
+        "In the Kingdom of Fools",
+        "The Happy Prince",
+        "Weathering the Storm in Ersama",
+        "The Last Leaf",
+        "A House Is Not a Home",
+        "The Beggar"
+      ]
+    }
+  },
+  "Class 12th": {
+    "subjects": [
+      "Chemistry",
+      "sample paper + mock paper",
+      "Maths",
+      "Physics",
+      "Biology"
+    ],
+    "chapters": {
+      "Chemistry": [
+        "Chapter 1 - Solutions",
+        "Chapter 2 - Electrochemistry",
+        "Chapter 3 - Chemical Kinetics",
+        "Chapter 4 - The d-and f-block Elements",
+        "Chapter 5 - Coordination Compounds",
+        "Chapter 6 - Haloalkanes and Haloarenes",
+        "Chapter 7 - Alcohols, Phenols and Ethers",
+        "Chapter 8 - Aldehydes, Ketones and Carboxylic acids",
+        "Chapter 9 - Amines",
+        "Chapter 10 - Biomolecules"
+      ],
+      "sample paper + mock paper": [
+        "guidelines chemistry",
+        "guidelines maths",
+        "guidelines physics",
+        "mock paper"
+      ],
+      "Maths": [
+        "Chapter 1 – Relations and Functions",
+        "Chapter 2 – Inverse Trigonometric Functions",
+        "Chapter 3 – Matrices",
+        "Chapter 4 – Determinants",
+        "Chapter 5 – Continuity and Differentiability",
+        "Chapter 6 – Application of Derivatives",
+        "Chapter 7 – Integrals",
+        "Chapter 8 – Application of Integrals",
+        "Chapter 9 – Differential Equations",
+        "Chapter 10 – Vector Algebra",
+        "Chapter 11 – Three Dimensional Geometry",
+        "Chapter 12 – Linear Programming",
+        "Chapter 13 – Probability"
+      ],
+      "Physics": [
+        "Chapter 1 – Electric Charges and Fields",
+        "Chapter 2 – Electrostatic Potential and Capacitance",
+        "Chapter 3 – Current Electricity",
+        "Chapter 4 – Moving Charges and Magnetism",
+        "Chapter 5 – Magnetism and Matter",
+        "Chapter 6 – Electromagnetic Induction",
+        "Chapter 7 – Alternating Current",
+        "Chapter 8 – Electromagnetic Waves",
+        "Chapter 9 – Ray Optics and Optical Instruments",
+        "Chapter 10 – Wave Optics",
+        "Chapter 11 – Dual Nature of Radiation and Matter",
+        "Chapter 12 – Atoms",
+        "Chapter 13 – Nuclei",
+        "Chapter 14 – Semiconductor Electronics Materials, Devices and Simple Circuits"
+      ],
+      "Biology": [
+        "Chapter-1 Sexual Reproduction in Flowering Plants",
+        "chapter-2--human-reproduction",
+        "chapter-3--reproductive-health",
+        "Chapter-4 Principles of Inheritance and Variation",
+        "chapter-5--molecular-basis-of-inheritance",
+        "Chapter-6-- Evolution",
+        "chapter-7--human-health-and-diseases",
+        "chapter-8--microbes-in-human-welfare",
+        "chapter-9--biotechnology-----principles-and-processes",
+        "chapter-10--biotechnology-and-its-applications",
+        "chapter-11--organisms-and-populations",
+        "chapter-12--ecosystem",
+        "chapter-13--biodiversity-and-its-conservation"
+      ]
+    }
+  },
+  "Class 11th": {
+    "subjects": [
+      "Chemistry",
+      "sample paper + mock paper",
+      "Maths",
+      "Physics",
+      "Biology"
+    ],
+    "chapters": {
+      "Chemistry": [
+        "Chapter 1 Some Basic Concepts of Chemistry",
+        "Chapter 2 Structure of Atom",
+        "Chapter 3 Classification of Elements and Periodicity in Properties",
+        "Chapter 4 Chemical Bonding and Molecular Structure",
+        "Chapter 5 Thermodynamics",
+        "Chapter 6 Equilibrium",
+        "Chapter 7 Redox Reactions",
+        "Chapter 8 Organic Chemistry – Some Basic Principles and Techniques",
+        "Chapter 9 Hydrocarbons"
+      ],
+      "sample paper + mock paper": [
+        "Chemistry_Sample_Paper",
+        "guidelines chemistry",
+        "guidelines maths",
+        "guidelines physics"
+      ],
+      "Maths": [
+        "Chapter 1 – Sets",
+        "Chapter 2 – Relations and Functions",
+        "Chapter 3 – Trigonometric Functions",
+        "Chapter 4 – Complex Numbers and Quadratic Equations",
+        "Chapter 5 – Linear Inequalities",
+        "Chapter 6 – Permutations and Combinations",
+        "Chapter 7 – Binomial Theorem",
+        "Chapter 8 – Sequences and Series",
+        "Chapter 9 – Straight Lines",
+        "Chapter 10 – Conic Sections",
+        "Chapter 11 – Introduction to Three Dimensional Geometry",
+        "Chapter 12 – Limits and Derivatives",
+        "Chapter 13 – Statistics",
+        "Chapter 14 – Probability"
+      ],
+      "Physics": [
+        "Chapter 1 – Units and Measurement",
+        "Chapter 2 – Motion in a Straight Line",
+        "Chapter 3 – Motion in a Plane",
+        "Chapter 4 – Laws of Motion",
+        "Chapter 5 – Work, Energy and Power",
+        "Chapter 6 – Systems of Particles and Rotational Motion",
+        "Chapter 7 – Gravitation",
+        "Chapter 9 – Mechanical Properties of Fluids",
+        "Chapter 10 – Thermal Properties of Matter",
+        "Chapter 11 – Thermodynamics",
+        "Chapter 12 – Kinetic Theory",
+        "Chapter 13 – Oscillations",
+        "Chapter 14 – Waves"
+      ],
+      "Biology": [
+        "Chapter 1 - Reproduction in Organisms",
+        "Chapter 2 - Sexual Reproduction in Flowering Plants",
+        "Chapter 3 - Human Reproduction",
+        "Chapter 4 - Reproductive Health",
+        "Chapter 5 - Principles of Inheritance and Variation",
+        "Chapter 6 - Molecular Basis of Inheritance",
+        "Chapter 7 - Evolution",
+        "Chapter 8 - Human Health and Disease",
+        "Chapter 9 - Strategies for Enhancement in Food Production",
+        "Chapter 10 - Microbes in Human Welfare"
+      ]
+    }
+  }
+}
