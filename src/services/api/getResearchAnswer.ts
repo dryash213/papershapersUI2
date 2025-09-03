@@ -7,7 +7,7 @@ export async function getResearchAnswer(query: string) {
 
     const apiURL = import.meta.env.VITE_API_BASE_URL;
     // Calling the researcher endpoint as specified by the curl command
-    const response = await axios.post(`${apiURL}/default/researcher`, payload, {
+    const response = await axios.post(`${apiURL}/research`, payload, {
       headers: { "Content-Type": "application/json" },
     });
 
