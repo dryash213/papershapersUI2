@@ -93,33 +93,6 @@ const HeroSection = ({ showStartFreeTrial, staggerContainer, fadeInUp }: any) =>
             }}
           />
         ))}
-
-        {/* Subtle Lines */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {[...Array(3)].map((_, i) => (
-            <motion.path
-              key={`line-${i}`}
-              d={`M${100 + i * 200} 50 Q${200 + i * 200} 150 ${300 + i * 200} 100`}
-              stroke="rgba(34, 197, 94, 0.1)"
-              strokeWidth="2"
-              fill="none"
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={{
-                pathLength: [0, 1, 0],
-                opacity: [0, 0.3, 0]
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                delay: i * 2,
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        </svg>
       </>
     );
   };
@@ -157,7 +130,7 @@ const HeroSection = ({ showStartFreeTrial, staggerContainer, fadeInUp }: any) =>
     <section className="text-center py-12 md:py-24 bg-gray-50 px-4 relative overflow-hidden">
       {/* Enhanced Background decoration */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-100/30"
+        className="absolute inset-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
@@ -166,18 +139,6 @@ const HeroSection = ({ showStartFreeTrial, staggerContainer, fadeInUp }: any) =>
       {/* Animated Background Elements */}
       <FloatingElements />
       <ParticleSystem />
-
-      {/* Subtle Grid Pattern */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: "50px 50px"
-        }}
-      />
 
       {/* Radial Glow Effects */}
       <motion.div
