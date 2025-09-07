@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-pill {
+  @apply relative inline-flex items-center justify-center font-semibold rounded-full px-7 py-3 sm:px-9 sm:py-4 text-sm sm:text-base transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+}
+.btn-neutral {
+  @apply bg-gray-200 text-gray-700 hover:bg-gray-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md focus-visible:ring-green-600;
+}
+.btn-accent {
+  @apply bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 ring-1 ring-green-200 hover:ring-green-300 hover:from-green-200 hover:to-emerald-100 hover:-translate-y-0.5 shadow-sm hover:shadow-md focus-visible:ring-green-600;
+}
