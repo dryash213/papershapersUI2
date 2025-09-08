@@ -2,8 +2,8 @@
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import ankitImage from '../assets/images/photo_ankit.png';
-// import anjaliImage from '../assets/images/photo_anjali.jpeg';
+import ankitImage from "../assets/images/photo_ankit.png";
+import anjaliImage from "../assets/images/photo_anjali.jpeg";
 import chetnaImage from "../assets/images/chetna_kumar.jpeg";
 // import yashImage from '../assets/images/photo_yash.jpeg';
 import harshImage from "../assets/images/photo_harsh.jpeg";
@@ -100,33 +100,34 @@ const AboutPage = () => {
                         </div> */}
 
             {/* Ankit Varshney - Frontend */}
-            {/* <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
-                            <img
-                                src={ankitImage}
-                                alt="Ankit Varshney"
-                                className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
-                            />
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
-                                Ankit Varshney
-                            </h3>
-                            <p className="text-sm text-green-600 font-medium mb-3 text-center">
-                                Frontend Architect
-                            </p>
-                            <p className="text-sm text-gray-600 text-center">
-                                Designed and implemented the React-based UI/UX, developed core application workflows,
-                                and engineered API integration layers for seamless system interaction.
-                            </p>
-                            <div className="mt-4 flex justify-center">
-                                <a
-                                    href="https://www.linkedin.com/in/ankitvars"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-600 hover:text-green-600 transition-colors"
-                                >
-                                    <LinkedinIcon className="w-5 h-5" />
-                                </a>
-                            </div>
-                        </div> */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+              <img
+                src={ankitImage}
+                alt="Ankit Varshney"
+                className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
+              />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
+                Ankit Varshney
+              </h3>
+              <p className="text-sm text-green-600 font-medium mb-3 text-center">
+                Frontend Architect
+              </p>
+              <p className="text-sm text-gray-600 text-center">
+                Designed and implemented the React-based UI/UX, developed core
+                application workflows, and engineered API integration layers for
+                seamless system interaction.
+              </p>
+              <div className="mt-4 flex justify-center">
+                <a
+                  href="https://www.linkedin.com/in/ankitvars"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-green-600 transition-colors"
+                >
+                  <LinkedinIcon className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
 
             {/* Chetna Kumar - Backend */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
@@ -158,33 +159,34 @@ const AboutPage = () => {
             </div>
 
             {/* Anjali Maddheshiya - Frontend */}
-            {/* <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
-                            <img
-                                src={anjaliImage}
-                                alt="Anjali Maddheshiya"
-                                className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
-                            />
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
-                                Anjali Maddheshiya
-                            </h3>
-                            <p className="text-sm text-green-600 font-medium mb-3 text-center">
-                                UI Engineer
-                            </p>
-                            <p className="text-sm text-gray-600 text-center">
-                                Developed reusable React components, implemented responsive layouts,
-                                and enhanced user interaction patterns across application workflows.
-                            </p>
-                            <div className="mt-4 flex justify-center">
-                                <a
-                                    href="https://www.linkedin.com/in/anjali-maddeshiya-986248183"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-600 hover:text-green-600 transition-colors"
-                                >
-                                    <LinkedinIcon className="w-5 h-5" />
-                                </a>
-                            </div>
-                        </div> */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+              <img
+                src={anjaliImage}
+                alt="Anjali Maddheshiya"
+                className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
+              />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
+                Anjali Maddheshiya
+              </h3>
+              <p className="text-sm text-green-600 font-medium mb-3 text-center">
+                UI Engineer
+              </p>
+              <p className="text-sm text-gray-600 text-center">
+                Developed reusable React components, implemented responsive
+                layouts, and enhanced user interaction patterns across
+                application workflows.
+              </p>
+              <div className="mt-4 flex justify-center">
+                <a
+                  href="https://www.linkedin.com/in/anjali-maddeshiya-986248183"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-green-600 transition-colors"
+                >
+                  <LinkedinIcon className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
