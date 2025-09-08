@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="google-site-verification" content="H_TULfIIc1BKhkIbd6XZq_nGCgyGX5SbAKg0gBp_gJg" />
-    <link rel="icon" href="./src/assets/favicon.ico" type="image/png" />
+    <meta
+      name="google-site-verification"
+      content="H_TULfIIc1BKhkIbd6XZq_nGCgyGX5SbAKg0gBp_gJg"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Papershapers</title>
+
+    <!-- SEO -->
     <meta
       name="description"
       content="Papershapers - Transforming education with AI-powered mock paper creation for CBSE and ICSE students."
@@ -20,7 +25,7 @@
       property="og:description"
       content="Transforming education with AI-powered mock paper creation for CBSE and ICSE students."
     />
-    <meta property="og:image" content="/path/to/og-image.jpg" />
+    <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:url" content="https://papershapers.in" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Papershapers" />
@@ -28,7 +33,48 @@
       name="twitter:description"
       content="Transforming education with AI-powered mock paper creation for CBSE and ICSE students."
     />
-    <!-- <meta name="twitter:image" content="/path/to/twitter-image.jpg" /> -->
+
+    <!-- Preconnect for faster Firebase & fonts -->
+    <link rel="preconnect" href="https://firebase.googleapis.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://firebaseinstallations.googleapis.com"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Preload CSS -->
+    <link
+      rel="preload"
+      href="/assets/index-B1gjDLO8.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/assets/index-B1gjDLO8.css" />
+    </noscript>
+
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="/assets/hero.webp" />
+
+    <!-- Minimal critical CSS -->
+    <style>
+      body {
+        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .hero {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+
+    <!-- MS Clarity -->
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =

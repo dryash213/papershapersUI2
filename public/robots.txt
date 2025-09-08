@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block private/admin and authenticated-only routes
+Disallow: /admin
+Disallow: /api/
+Disallow: /private/
+Disallow: /dashboard
+Disallow: /mock-paper-creator
+Disallow: /document-helper
+Disallow: /research-service
+
+# Public auth pages you may want indexed can be allowed (login/register often not necessary in sitemap)
+# Disallow login/register/forgot if you want them hidden from crawlers
+# Disallow: /login
+# Disallow: /register
+# Disallow: /forgot-password
+
+Sitemap: https://www.papershapers.in/sitemap.xml

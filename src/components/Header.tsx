@@ -20,12 +20,6 @@ export default function Header() {
   const handleProfileClick = () => setIsPopoverOpen(!isPopoverOpen);
 
   const handleGoogleSignIn = async () => {
-    // try {
-    //   await signInWithGoogle?.();
-    //   setIsMobileMenuOpen(false);
-    // } catch (error) {
-    //   console.error("Google sign in failed:", error);
-    // }
     navigate("/login");
   };
 
@@ -60,7 +54,7 @@ export default function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-gray-800 focus:outline-none"
+            className="text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2 rounded"
             aria-label="Toggle menu"
           >
             <svg
@@ -125,7 +119,8 @@ export default function Header() {
           ) : (
             <button
               onClick={handleGoogleSignIn}
-              className="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 text-sm flex items-center gap-2"
+              aria-label="Login to Papershapers"
+              className="px-4 py-2 bg-green-700 text-white rounded-full hover:bg-green-800 text-sm flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2"
             >
               Login
             </button>
@@ -178,7 +173,8 @@ export default function Header() {
             ) : (
               <button
                 onClick={handleGoogleSignIn}
-                className="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 text-sm flex items-center gap-2"
+                aria-label="Login to Papershapers"
+                className="px-4 py-2 bg-green-700 text-white rounded-full hover:bg-green-800 text-sm flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2"
               >
                 Login
               </button>

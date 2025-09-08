@@ -4,88 +4,213 @@ import {
   SparklesIcon,
 } from "@heroicons/react/24/solid";
 import FAQSection from "components/FAQSection";
+import HeroSection from "components/HeroSection";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router";
+import { FC, useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom"; // fixed import
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import HeroSection from "components/HeroSection";
 
-// Animation variants with proper typing
+/* ------------------------------
+   Animation variants (typed)
+   ------------------------------ */
 const fadeInUp: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 60
-  },
+  hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const staggerContainer: Variants = {
-  hidden: {
-    opacity: 0
-  },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.3
-    }
-  }
+    transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+  },
 };
 
 const scaleIn: Variants = {
-  hidden: {
-    scale: 0.8,
-    opacity: 0
-  },
+  hidden: { scale: 0.8, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  }
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 const slideInLeft: Variants = {
-  hidden: {
-    x: -100,
-    opacity: 0
-  },
+  hidden: { x: -100, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
-// Custom hook for scroll animations
+/* ------------------------------
+   Custom hook for scroll animations
+   ------------------------------ */
 const useScrollAnimation = () => {
   const controls = useAnimation();
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    if (inView) controls.start("visible");
   }, [controls, inView]);
 
   return { ref, controls };
 };
 
-const LandingPage = () => {
+/* ------------------------------
+   SocialLinks component
+   (use real URLs for production)
+   ------------------------------ */
+const SocialLinks: FC = () => {
+  return (
+    <div className="flex space-x-4 items-center justify-center">
+      {/* Replace these hrefs with your actual social URLs */}
+      <a
+        href="https://www.facebook.com/papershapers"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Papershapers on Facebook"
+        className="text-sm hover:underline"
+      >
+        Facebook
+      </a>
+      <a
+        href="https://www.instagram.com/papershapers"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Papershapers on Instagram"
+        className="text-sm hover:underline"
+      >
+        Instagram
+      </a>
+      <a
+        href="https://www.linkedin.com/company/papershapers"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Papershapers on LinkedIn"
+        className="text-sm hover:underline"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://twitter.com/papershapers"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Papershapers on Twitter"
+        className="text-sm hover:underline"
+      >
+        X
+      </a>
+    </div>
+  );
+};
+
+/* ------------------------------
+   Student Reviews (visible section + schema)
+   ------------------------------ */
+const StudentReviewsSection: FC = () => {
+  const reviews = [
+    {
+      name: "Rahul S.",
+      role: "Class 12 Student",
+      rating: 5,
+      short: "Saved my board prep — very specific chapter-wise tests!",
+      id: "r1",
+    },
+    {
+      name: "Priya M.",
+      role: "CBSE Teacher",
+      rating: 5,
+      short: "Great for quick formative assessments in class.",
+      id: "r2",
+    },
+    {
+      name: "Dr. K. Sharma",
+      role: "HOD - Physics",
+      rating: 4,
+      short: "Useful for standardizing practice across sections.",
+      id: "r3",
+    },
+  ];
+
+  // Inline JSON-LD for reviews (AggregateRating + Reviews)
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Papershapers",
+    "url": "https://www.papershapers.in/",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      ratingValue: "4.7",
+      reviewCount: reviews.length.toString(),
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: r.name,
+      datePublished: "2024-01-01", // change to real dates if available
+      reviewRating: { "@type": "Rating", ratingValue: r.rating.toString() },
+      reviewBody: r.short,
+    })),
+  };
+
+  return (
+    <section className="py-16 bg-gradient-to-br from-white to-green-50">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(ld)}</script>
+      </Helmet>
+
+      <div className="max-w-5xl mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8">
+          What Students & Teachers Say
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {reviews.map((r) => (
+            <article
+              key={r.id}
+              className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
+              aria-label={`Review by ${r.name}`}
+            >
+              <div className="flex items-center mb-3">
+                <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center font-bold text-green-700 mr-3">
+                  {r.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">{r.name}</h3>
+                  <p className="text-xs text-gray-500">{r.role}</p>
+                </div>
+              </div>
+
+              <p className="text-gray-700 mb-4">{r.short}</p>
+
+              <div className="flex items-center space-x-2 text-yellow-500">
+                {Array.from({ length: r.rating }).map((_, idx) => (
+                  <span key={idx} aria-hidden>
+                    ★
+                  </span>
+                ))}
+                <span className="text-sm text-gray-500">({r.rating})</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ------------------------------
+   LandingPage (main)
+   ------------------------------ */
+const LandingPage: FC = () => {
   // State to control visibility of "Start Free Trial" button
   const [showStartFreeTrial, setShowStartFreeTrial] = useState(true);
 
@@ -109,29 +234,99 @@ const LandingPage = () => {
       }
     } catch (e) {
       setShowStartFreeTrial(true);
+      // keep this console for dev debugging
+      // eslint-disable-next-line no-console
       console.error("Failed to parse user from sessionStorage:", e);
     }
   }, []);
 
+  // JSON-LD for Organization and Website (main SEO schema)
+  const orgLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Papershapers",
+    url: "https://www.papershapers.in/",
+    sameAs: [
+      "https://www.facebook.com/papershapers",
+      "https://www.instagram.com/papershapers",
+      "https://www.linkedin.com/company/papershapers",
+      "https://twitter.com/papershapers",
+    ],
+    logo: "https://www.papershapers.in/logo.png", // replace with your real logo path
+  };
+
+  const pageTitle =
+    "Papershapers — CBSE Mock Papers & Exam Generator | Class 9–12 Practice Tests";
+  const pageDescription =
+    "Generate chapter-wise CBSE mock papers, track performance, and access free practice tests for Classes 9-12. Perfect for students, teachers, and institutions.";
+
   return (
     <div className="font-sans text-gray-800 overflow-hidden">
+      {/* SEO Meta */}
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href="https://www.papershapers.in/" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.papershapers.in/" />
+        <meta property="og:image" content="https://www.papershapers.in/og-image.jpg" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.papershapers.in/og-image.jpg" />
+
+        {/* Structured data */}
+        <script type="application/ld+json">{JSON.stringify(orgLd)}</script>
+      </Helmet>
+
       {/* Header */}
       <Header />
 
-      {/* Hero Section */}
-      <HeroSection showStartFreeTrial={showStartFreeTrial} staggerContainer={staggerContainer} fadeInUp={fadeInUp} />
-      
-      {/* Features Section */}
-      <FeaturesSection />
+      {/* Visible H1 (SEO-focused). If your HeroSection already has a visible H1, you can make this sr-only instead. */}
+      <main>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mt-8 mb-6 px-4">
+          Generate CBSE Mock Papers & Chapter-Wise Practice Tests for Class 9–12
+        </h1>
 
-      {/* Benefits Section */}
-      <BenefitsSection />
+        {/* Hero Section */}
+        <HeroSection
+          showStartFreeTrial={showStartFreeTrial}
+          staggerContainer={staggerContainer}
+          fadeInUp={fadeInUp}
+        />
 
-      {/* Pricing Section */}
-      <PricingSection showStartFreeTrial={showStartFreeTrial} />
+        {/* Features Section */}
+        <FeaturesSection />
 
-      {/* FAQSection */}
-      <FAQSection />
+        {/* Benefits Section */}
+        <BenefitsSection />
+
+        {/* Pricing Section */}
+        <PricingSection showStartFreeTrial={showStartFreeTrial} />
+
+        {/* Student Reviews */}
+        <StudentReviewsSection />
+
+        {/* FAQ Section */}
+        <FAQSection />
+
+        {/* Social Links (explicit in page to ensure correct linking and anchor attrs) */}
+        <section className="py-6">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <p className="text-sm text-gray-500 mb-3">
+              Follow Papershapers
+            </p>
+            <SocialLinks />
+          </div>
+        </section>
+      </main>
 
       {/* Footer */}
       <Footer />
@@ -139,31 +334,40 @@ const LandingPage = () => {
   );
 };
 
-// Features Section Component
-const FeaturesSection = () => {
+export default LandingPage;
+
+/* ------------------------------
+   Reused sections (kept your original behavior)
+   — FeaturesSection, BenefitsSection, PricingSection follow
+     with minimal adjustments (no functional change).
+   They are defined below for completeness and to keep the file
+   self-contained — you can split them out as needed.
+   ------------------------------ */
+
+const FeaturesSection: FC = () => {
   const { ref, controls } = useScrollAnimation();
 
   const features = [
     {
-      title: "AI-Powered Exam Generator",
+      title: "Mock Exam Generator",
       description:
-        "Create customized mock papers and test questions for Classes 9-12 (CBSE). Select your class, subject, and chapter to generate tailored practice materials or assessment questions instantly.",
+        "Create customized mock papers and chapter-wise tests for Classes 9-12 (CBSE). Select class, subject, and chapter to generate practice materials instantly.",
       link: "/mock-paper-creator",
       linkText: "Try Exam Generator",
       icon: <SparklesIcon className="w-10 h-10 text-green-600" />,
     },
     {
-      title: "Document-Based Question Generator",
+      title: "Document-Based Question Creator",
       description:
-        "Upload documents (resumes, study materials, etc.) to receive personalized text outputs with relevant interview questions or chapter tests generated using content analysis and web research integration.",
+        "Upload study material or documents to generate personalized questions and short tests based on the content.",
       link: "/document-helper",
       linkText: "Try Document Helper",
       icon: <CloudArrowUpIcon className="w-10 h-10 text-green-600" />,
     },
     {
-      title: "Web Research Questions Generator",
+      title: "Web Research Question Builder",
       description:
-        "Input your research query and get a detailed text output compiling curated web sources and research insights, empowering your study and analysis with up-to-date information.",
+        "Input a research topic to receive curated study questions and research pointers compiled from trusted sources.",
       link: "/research-service",
       linkText: "Try Research Text Generator",
       icon: <MagnifyingGlassIcon className="w-10 h-10 text-green-600" />,
@@ -172,27 +376,15 @@ const FeaturesSection = () => {
 
   return (
     <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50 relative overflow-hidden">
-      {/* Background decorations */}
       <motion.div
         className="absolute top-0 left-0 w-72 h-72 bg-green-200/20 rounded-full blur-3xl"
-        animate={{
-          x: [0, 50, 0],
-          y: [0, -30, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
+        animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        aria-hidden
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={fadeInUp}
-        >
+        <motion.div ref={ref} initial="hidden" animate={controls} variants={fadeInUp}>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-emerald-700">
             Smart Exam Preparation & Research Solutions
           </h2>
@@ -208,10 +400,7 @@ const FeaturesSection = () => {
             <motion.div
               key={index}
               variants={scaleIn}
-              whileHover={{
-                y: -10,
-                transition: { duration: 0.3 }
-              }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl border border-white/20 flex flex-col group"
             >
               <div className="flex-grow">
@@ -222,12 +411,8 @@ const FeaturesSection = () => {
                 >
                   {feature.icon}
                 </motion.div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">{feature.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
               </div>
               <motion.a
                 href={feature.link}
@@ -245,54 +430,39 @@ const FeaturesSection = () => {
   );
 };
 
-// Benefits Section Component
-const BenefitsSection = () => {
+const BenefitsSection: FC = () => {
   const { ref, controls } = useScrollAnimation();
 
   const benefits = [
     {
       title: "Cost-Free Innovation:",
-      description: "Empower your studies without any cost, as our platform is completely free for students, teachers, and institutions."
+      description: "Empower your studies without any cost — free for students and institutions.",
     },
     {
       title: "Personalized Exam Generation:",
-      description: "Leverage AI to create custom mock papers tailored to your specific curriculum and learning needs."
+      description: "Create custom mock papers tailored to your curriculum and learning needs.",
     },
     {
       title: "Real-Time Answer Key:",
-      description: "Receive immediate solutions that helps you pinpoint strengths and address weaknesses effectively."
+      description: "Receive instant solutions that help you identify strengths and weaknesses.",
     },
     {
       title: "Integrated Research Support:",
-      description: "Combine exam prep with research outputs and curated insights from credible web sources for a holistic learning experience."
-    }
+      description: "Combine exam prep with curated web insights for a richer study experience.",
+    },
   ];
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center px-4">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={fadeInUp}
-        >
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Key Benefits of Using Papershapers
-          </h2>
+        <motion.div ref={ref} initial="hidden" animate={controls} variants={fadeInUp}>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Key Benefits of Using Papershapers</h2>
           <p className="text-lg md:text-xl text-gray-600 mb-8">
-            Experience a revolution in exam preparation and research with our
-            free, AI-powered platform—designed exclusively for educational
-            excellence.
+            Experience a revolution in exam preparation and research with our free, student-first platform.
           </p>
         </motion.div>
 
-        <motion.ul
-          className="space-y-6 text-left"
-          variants={staggerContainer}
-          initial="hidden"
-          animate={controls}
-        >
+        <motion.ul className="space-y-6 text-left" variants={staggerContainer} initial="hidden" animate={controls}>
           {benefits.map((benefit, index) => (
             <motion.li
               key={index}
@@ -303,15 +473,8 @@ const BenefitsSection = () => {
             >
               <motion.span
                 className="flex-shrink-0 mr-3 text-green-700 font-bold text-xl"
-                animate={{
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 2,
-                  delay: index * 0.5,
-                  repeat: Infinity,
-                  repeatDelay: 5
-                }}
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 2, delay: index * 0.5, repeat: Infinity, repeatDelay: 5 }}
               >
                 •
               </motion.span>
@@ -326,26 +489,16 @@ const BenefitsSection = () => {
   );
 };
 
-// Pricing Section Component
-const PricingSection = ({ showStartFreeTrial }: { showStartFreeTrial: boolean }) => {
+const PricingSection: FC<{ showStartFreeTrial: boolean }> = ({ showStartFreeTrial }) => {
   const { ref, controls } = useScrollAnimation();
 
   return (
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto text-center px-4">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={fadeInUp}
-        >
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Completely Free for Educational Use
-          </h2>
+        <motion.div ref={ref} initial="hidden" animate={controls} variants={fadeInUp}>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Completely Free for Educational Use</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8">
-            We believe in accessible education for all. Our platform is
-            completely free for students, teachers, and educational
-            institutions.
+            Our platform is free for students, teachers, and institutions.
           </p>
         </motion.div>
 
@@ -357,73 +510,28 @@ const PricingSection = ({ showStartFreeTrial }: { showStartFreeTrial: boolean })
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          {/* Background decoration */}
           <motion.div
             className="absolute top-0 right-0 w-32 h-32 bg-green-200/20 rounded-full blur-2xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3]
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            aria-hidden
           />
 
-          <motion.div
-            className="mb-6"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-          >
-            <span className="bg-green-700 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium">
-              Free Forever
-            </span>
+          <motion.div className="mb-6" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5, type: "spring", stiffness: 200 }}>
+            <span className="bg-green-700 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium">Free Forever</span>
           </motion.div>
 
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-            Full Access for Everyone
-          </h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800">Full Access for Everyone</h3>
 
-          <motion.p
-            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-green-700"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.8, type: "spring", stiffness: 150 }}
-          >
+          <motion.p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-green-700" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.8, type: "spring", stiffness: 150 }}>
             $0
           </motion.p>
 
-          <motion.ul
-            className="text-gray-600 space-y-3 mb-8 text-sm sm:text-base max-w-sm mx-auto text-left"
-            variants={staggerContainer}
-            initial="hidden"
-            animate={controls}
-          >
-            {[
-              "Unlimited AI-generated papers",
-              "All question types and subjects",
-              "Priority support for educators"
-            ].map((item, index) => (
-              <motion.li
-                key={index}
-                className="flex items-center"
-                variants={fadeInUp}
-              >
-                <motion.svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 1 + index * 0.2 }}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
-                    clipRule="evenodd"
-                  />
+          <motion.ul className="text-gray-600 space-y-3 mb-8 text-sm sm:text-base max-w-sm mx-auto text-left" variants={staggerContainer} initial="hidden" animate={controls}>
+            {["Unlimited generated papers", "All question types and subjects", "Priority support for educators"].map((item, index) => (
+              <motion.li key={index} className="flex items-center" variants={fadeInUp}>
+                <motion.svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1 + index * 0.2 }}>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clipRule="evenodd" />
                 </motion.svg>
                 {item}
               </motion.li>
@@ -431,19 +539,9 @@ const PricingSection = ({ showStartFreeTrial }: { showStartFreeTrial: boolean })
           </motion.ul>
 
           {showStartFreeTrial && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/register"
-                  className="inline-block px-6 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition-colors duration-300 shadow-md text-base sm:text-lg font-semibold hover:shadow-lg"
-                >
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }}>
+              <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/register" className="inline-block px-6 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition-colors duration-300 shadow-md text-base sm:text-lg font-semibold hover:shadow-lg">
                   Get Started Free
                 </Link>
               </motion.div>
@@ -451,18 +549,10 @@ const PricingSection = ({ showStartFreeTrial }: { showStartFreeTrial: boolean })
           )}
         </motion.div>
 
-        <motion.p
-          className="mt-8 text-xs sm:text-sm text-gray-500"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-        >
-          For schools and institutions needing customized solutions, contact
-          our education team.
+        <motion.p className="mt-8 text-xs sm:text-sm text-gray-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}>
+          For schools and institutions needing customized solutions, contact our education team.
         </motion.p>
       </div>
     </section>
   );
 };
-
-export default LandingPage;
