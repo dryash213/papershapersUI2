@@ -11,7 +11,7 @@ import {
   UserCredential,
 } from "firebase/auth";
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { auth } from "../../firebase";
+import { getFirebaseServices } from "../../firebase";
 
 interface User {
   name: string;
@@ -61,6 +61,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const signInWithGoogle = async () => {
     try {
       const provider = new GoogleAuthProvider();
+      const { auth } = await getFirebaseServices();
       const userCredential = await signInWithPopup(auth, provider);
       updateUserInState(userCredential.user);
       return true;
@@ -72,6 +73,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const login = async (email: string, password: string) => {
     try {
+      const { auth } = await getFirebaseServices();
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
@@ -107,6 +109,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const signup = async (email: string, password: string) => {
     try {
+      const { auth } = await getFirebaseServices();
       const userCredential: UserCredential =
         await createUserWithEmailAndPassword(auth, email, password);
       const userData = userCredential.user;
@@ -125,6 +128,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const sendVerificationEmail = async () => {
+    const { auth } = await getFirebaseServices();
     if (auth.currentUser) {
       await sendEmailVerification(auth.currentUser);
     }
@@ -132,6 +136,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const verifyEmail = async (code: string) => {
     try {
+      const { auth } = await getFirebaseServices();
       await applyActionCode(auth, code);
       const user = auth.currentUser;
       if (user) await user.reload();
@@ -144,6 +149,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const resetPassword = async (email: string) => {
     try {
+      const { auth } = await getFirebaseServices();
       await sendPasswordResetEmail(auth, email);
       return true;
     } catch (error) {

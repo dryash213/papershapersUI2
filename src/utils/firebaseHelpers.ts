@@ -1,5 +1,5 @@
 import { doc, getDoc, getFirestore, setDoc } from "firebase/firestore";
-import { firestore } from "../../firebase";
+import { getFirebaseServices } from "../../firebase";
 interface User {
   name: string;
   email: string;
@@ -8,6 +8,7 @@ interface User {
 
 // Fetch user data from the database
 export const fetchUserFromDatabase = async (email: string) => {
+  const { firestore } = await getFirebaseServices();
   const userDocRef = doc(firestore, "users", email);
   const docSnap = await getDoc(userDocRef);
 
