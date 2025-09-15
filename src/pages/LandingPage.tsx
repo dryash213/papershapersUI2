@@ -316,16 +316,6 @@ const LandingPage: FC = () => {
 
         {/* FAQ Section */}
         <FAQSection />
-
-        {/* Social Links (explicit in page to ensure correct linking and anchor attrs) */}
-        <section className="py-6">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <p className="text-sm text-gray-500 mb-3">
-              Follow Papershapers
-            </p>
-            <SocialLinks />
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
