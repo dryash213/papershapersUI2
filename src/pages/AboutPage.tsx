@@ -3,10 +3,10 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import ankitImage from "../assets/images/photo_ankit.jpeg";
-import anjaliImage from "../assets/images/photo_anjali.jpeg";
-import chetnaImage from "../assets/images/chetna_kumar.jpeg";
+// import anjaliImage from "../assets/images/photo_anjali.jpeg";
+// import chetnaImage from "../assets/images/chetna_kumar.jpeg";
 // import yashImage from '../assets/images/photo_yash.jpeg';
-import harshImage from "../assets/images/photo_harsh.jpeg";
+// import harshImage from "../assets/images/photo_harsh.jpeg";
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg
@@ -43,7 +43,7 @@ const AboutPage = () => {
             {/* Harsh Kushwaha - CEO */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
               <img
-                src={harshImage}
+                src="/images/photo_harsh.jpeg"
                 alt="Harsh Kushwaha"
                 className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
               />
@@ -132,7 +132,7 @@ const AboutPage = () => {
             {/* Chetna Kumar - Backend */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
               <img
-                src={chetnaImage}
+                src="/images/chetna_kumar.jpeg"
                 alt="Chetna Kumar"
                 className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
               />
@@ -161,7 +161,7 @@ const AboutPage = () => {
             {/* Anjali Maddheshiya - Frontend */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
               <img
-                src={anjaliImage}
+                src="/images/photo_anjali.jpeg"
                 alt="Anjali Maddheshiya"
                 className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
               />
