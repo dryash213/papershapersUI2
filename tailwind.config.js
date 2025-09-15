@@ -13,4 +13,5 @@ export default {
     },
   },
   plugins: [motionPlugin, require("@tailwindcss/aspect-ratio")],
+  safelist: ["sr-only"],
 };
