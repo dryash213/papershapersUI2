@@ -66,54 +66,6 @@ const useScrollAnimation = () => {
 };
 
 /* ------------------------------
-   SocialLinks component
-   (use real URLs for production)
-   ------------------------------ */
-const SocialLinks: FC = () => {
-  return (
-    <div className="flex space-x-4 items-center justify-center">
-      {/* Replace these hrefs with your actual social URLs */}
-      <a
-        href="https://www.facebook.com/papershapers"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Papershapers on Facebook"
-        className="text-sm hover:underline"
-      >
-        Facebook
-      </a>
-      <a
-        href="https://www.instagram.com/papershapers"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Papershapers on Instagram"
-        className="text-sm hover:underline"
-      >
-        Instagram
-      </a>
-      <a
-        href="https://www.linkedin.com/company/papershapers"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Papershapers on LinkedIn"
-        className="text-sm hover:underline"
-      >
-        LinkedIn
-      </a>
-      <a
-        href="https://twitter.com/papershapers"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Papershapers on Twitter"
-        className="text-sm hover:underline"
-      >
-        X
-      </a>
-    </div>
-  );
-};
-
-/* ------------------------------
    Student Reviews (visible section + schema)
    ------------------------------ */
 const StudentReviewsSection: FC = () => {
