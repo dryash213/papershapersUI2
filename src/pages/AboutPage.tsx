@@ -2,7 +2,7 @@
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ankitImage from "../assets/images/photo_ankit.png";
+// import ankitImage from "../assets/images/photo_ankit.jpeg";
 import anjaliImage from "../assets/images/photo_anjali.jpeg";
 import chetnaImage from "../assets/images/chetna_kumar.jpeg";
 // import yashImage from '../assets/images/photo_yash.jpeg';
@@ -102,7 +102,7 @@ const AboutPage = () => {
             {/* Ankit Varshney - Frontend */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
               <img
-                src={ankitImage}
+                src="/images/photo_ankit.jpeg"
                 alt="Ankit Varshney"
                 className="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-100"
               />
@@ -190,7 +190,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
