@@ -57,6 +57,7 @@ const AppRoutes: React.FC = () => (
       />
       <link rel="canonical" href="https://papershapers.in/" />
       <meta name="robots" content="index, follow" />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8294578673663801" crossOrigin="anonymous"></script>
     </Helmet>
     <ScrollToTop />
     <Routes>
