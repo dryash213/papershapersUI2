@@ -93,6 +93,9 @@ export default function Header() {
           <Link to="/services" className="hover:text-green-700">
             Services
           </Link>
+          <Link to="/question-paper-generator" className="hover:text-green-700">
+            Paper Generator
+          </Link>
           <Link to="/contact" className="hover:text-green-700">
             Contact
           </Link>
@@ -152,6 +155,13 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
+            </Link>
+            <Link
+              to="/question-paper-generator"
+              className="text-gray-700 hover:text-green-700"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Paper Generator
             </Link>
             <Link
               to="/contact"

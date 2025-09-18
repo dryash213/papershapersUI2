@@ -243,10 +243,6 @@ const LandingPage: FC = () => {
 
       {/* Visible H1 (SEO-focused). If your HeroSection already has a visible H1, you can make this sr-only instead. */}
       <main>
-        <h1 className="text-3xl md:text-4xl font-bold text-center mt-8 mb-6 px-4">
-          Generate CBSE Mock Papers & Chapter-Wise Practice Tests for Class 9–12
-        </h1>
-
         {/* Hero Section */}
         <HeroSection
           showStartFreeTrial={showStartFreeTrial}

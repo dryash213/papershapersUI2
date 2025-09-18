@@ -1,0 +1,326 @@
+{
+  "paper_id": "CBSE_11_Biology_80M_180min_2024",
+  "board": "CBSE",
+  "class": "Class 11th",
+  "subject": "Biology",
+  "questions": [
+    {
+      "section_id": "A",
+      "q_id": "A.1",
+      "q_text": "Which biomolecule is primarily responsible for storing genetic information in living organisms?\n(a) Protein\n(b) Carbohydrate\n(c) Nucleic acid\n(d) Lipid",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["bcdf345a-cd08-5489-8759-56adf2d5c709"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.2",
+      "q_text": "What is the approximate concentration of alcohol at which yeasts poison themselves to death during anaerobic respiration?\n(a) 5 percent\n(b) 13 percent\n(c) 25 percent\n(d) 50 percent",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.3",
+      "q_text": "Which of the following formed elements of blood is primarily involved in oxygen transport?\n(a) Erythrocytes\n(b) Leucocytes\n(c) Platelets\n(d) Plasma",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.4",
+      "q_text": "The historical perspective of biology as natural history aided research questions primarily in:\n(a) Physics and Chemistry\n(b) Physiology and Evolutionary Biology\n(c) Mathematics and Statistics\n(d) Engineering and Technology",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["411a39be-6d33-53ca-a5a1-cd6ca8b7c170"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.5",
+      "q_text": "Which of the following is an example of a primary metabolite?\n(a) Alkaloids\n(b) Rubber\n(c) Amino acids\n(d) Pigments",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["bcdf345a-cd08-5489-8759-56adf2d5c709"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.6",
+      "q_text": "The complete oxidation of glucose and extraction of energy to synthesize a larger number of ATP molecules occurs during:\n(a) Glycolysis\n(b) Fermentation\n(c) Aerobic respiration\n(d) Anaerobic respiration",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.7",
+      "q_text": "Which of the following acts as an immune cell in the blood?\n(a) Erythrocytes\n(b) Neutrophils\n(c) Platelets\n(d) Albumins",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.8",
+      "q_text": "Which of the following factors largely determines the diversity of living organisms in the biosphere?\n(a) Amount of water available\n(b) Chemical composition of the environment\n(c) Presence of carbon dioxide\n(d) All of the above",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["bcdf345a-cd08-5489-8759-56adf2d5c709"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.9",
+      "q_text": "What is the primary function of ATP molecules in cellular metabolism?\n(a) Genetic information storage\n(b) Structural support\n(c) Energy currency\n(d) Enzymatic activity",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.10",
+      "q_text": "Which of the following is NOT a component of the formed elements in blood?\n(a) Erythrocytes\n(b) Leukocytes\n(c) Platelets\n(d) Fibrinogen",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.11",
+      "q_text": "Which of the following is a characteristic of anaerobic respiration?\n(a) Requires oxygen\n(b) Produces a large number of ATP molecules\n(c) Occurs in the presence of oxygen\n(d) Involves incomplete oxidation of glucose",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.12",
+      "q_text": "The diverse chemical composition of living organisms primarily consists of:\n(a) Inorganic compounds only\n(b) Organic compounds only\n(c) Both organic and inorganic compounds\n(d) Only water",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["bcdf345a-cd08-5489-8759-56adf2d5c709"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.13",
+      "q_text": "Which of the following is a major function of platelets?\n(a) Oxygen transport\n(b) Immunity\n(c) Blood clotting\n(d) Hormone secretion",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.14",
+      "q_text": "The term 'biomolecules' refers to:\n(a) Only proteins and carbohydrates\n(b) Only nucleic acids and lipids\n(c) All organic compounds found in living organisms\n(d) All inorganic compounds found in living organisms",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["bcdf345a-cd08-5489-8759-56adf2d5c709"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.15",
+      "q_text": "In which part of the cell does glycolysis occur?\n(a) Mitochondria\n(b) Cytoplasm\n(c) Nucleus\n(d) Ribosome",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Easy",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "A",
+      "q_id": "A.16",
+      "q_text": "What is the significance of using 'standard technical terms and standard definitions' in plant classification?\n(a) To make the study more complex\n(b) To ensure uniformity and clarity in communication\n(c) To limit the number of plant species\n(d) To replace traditional names with scientific ones",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "Medium",
+      "sources": ["da62c850-3639-54c8-b875-7f695ca04c93"]
+    },
+    {
+      "section_id": "B",
+      "q_id": "B.1",
+      "q_text": "Differentiate between living and non-living matter based on their elemental composition, as mentioned in the context of chemical analysis.",
+      "type": "SA",
+      "marks": 2,
+      "difficulty": "Medium",
+      "sources": ["f12e5731-7f2b-5b99-b658-0baa2f4f2e19"]
+    },
+    {
+      "section_id": "B",
+      "q_id": "B.2",
+      "q_text": "Explain why yeasts die when alcohol concentration reaches about 13 percent during anaerobic respiration.",
+      "type": "SA",
+      "marks": 2,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "B",
+      "q_id": "B.3",
+      "q_text": "Mention any two adaptations found in plants to their environment, such as for protection or storage.",
+      "type": "SA",
+      "marks": 2,
+      "difficulty": "Easy",
+      "sources": ["da62c850-3639-54c8-b875-7f695ca04c93"]
+    },
+    {
+      "section_id": "B",
+      "q_id": "B.4",
+      "q_text": "Name the components of the formed elements in the blood and mention one major function of each of them.",
+      "type": "SA",
+      "marks": 2,
+      "difficulty": "Easy",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    },
+    {
+      "section_id": "B",
+      "q_id": "B.5",
+      "q_text": "How is ATP synthesis in cellular metabolism different in aerobic respiration compared to anaerobic respiration in terms of the number of ATP molecules produced?",
+      "type": "SA",
+      "marks": 2,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.1",
+      "q_text": "Describe the major pathways of anaerobic respiration.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.2",
+      "q_text": "Explain the concept of 'biomolecules' and their significance in living organisms.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Easy",
+      "sources": ["bcdf345a-cd08-5489-8759-56adf2d5c709"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.3",
+      "q_text": "Discuss the importance of standard technical terms and definitions in the classification and understanding of higher plants.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Medium",
+      "sources": ["da62c850-3639-54c8-b875-7f695ca04c93"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.4",
+      "q_text": "Describe the different levels of structural organization in proteins.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Medium",
+      "sources": ["f12e5731-7f2b-5b99-b658-0baa2f4f2e19"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.5",
+      "q_text": "Explain the role of different types of leukocytes in the immune system.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Medium",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.6",
+      "q_text": "Based on the information available, compare the total amount of cellulose produced by all plants in the biosphere with the annual consumption of plant material by man for paper manufacturing.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Hard",
+      "sources": ["09ff616a-d2f7-567c-9588-e6862cb583d2"]
+    },
+    {
+      "section_id": "C",
+      "q_id": "C.7",
+      "q_text": "Elaborate on how biology, initially considered a natural history, became meaningful and helpful in framing research questions in physiology or evolutionary biology.",
+      "type": "SA",
+      "marks": 3,
+      "difficulty": "Medium",
+      "sources": ["411a39be-6d33-53ca-a5a1-cd6ca8b7c170"]
+    },
+    {
+      "section_id": "D",
+      "q_id": "D.1",
+      "q_text": "Read the following passage and answer the questions below:\n\nA wide diversity in living organisms exists in our biosphere, all composed of various chemical elements. A chemical analysis of living tissue reveals a presence of elements similar to those found in the earth's crust, but their arrangement into complex biomolecules like proteins, nucleic acids, and carbohydrates is unique to life. These biomolecules play crucial roles, from storing genetic information to catalyzing reactions. Understanding their structure and function is fundamental to biological inquiry.\n\n(a) Give two examples of biomolecules and their primary functions. (2 marks)\n(b) How does the overall chemical composition, beyond elemental presence, distinguish living organisms from non-living matter like earth's crust? (2 marks)",
+      "type": "SA",
+      "marks": 4,
+      "difficulty": "Medium",
+      "sources": [
+        "bcdf345a-cd08-5489-8759-56adf2d5c709",
+        "f12e5731-7f2b-5b99-b658-0baa2f4f2e19"
+      ]
+    },
+    {
+      "section_id": "D",
+      "q_id": "D.2",
+      "q_text": "Read the following passage and answer the questions below:\n\nCellular respiration is a fundamental process for energy extraction. Organisms can carry out complete oxidation of glucose in aerobic conditions to synthesize a larger number of ATP molecules for cellular metabolism. However, in the absence of oxygen, anaerobic pathways, such as fermentation, occur. Yeasts are known to perform alcoholic fermentation, producing alcohol and carbon dioxide. A critical aspect of this process is that yeasts poison themselves to death if the alcohol concentration exceeds a certain threshold.\n\n(a) Name the process by which organisms carry out complete oxidation of glucose. Where does it primarily occur in eukaryotic cells? (2 marks)\n(b) Why is the amount of ATP synthesized in anaerobic respiration less compared to aerobic respiration? (2 marks)",
+      "type": "SA",
+      "marks": 4,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "E",
+      "q_id": "E.1",
+      "q_text": "Describe the process of glycolysis, highlighting its key steps and end products. Discuss its significance in both aerobic and anaerobic respiration.",
+      "type": "SA",
+      "marks": 5,
+      "difficulty": "Medium",
+      "sources": ["ef71e5a0-8ff8-5cac-8d93-77a56f672e27"]
+    },
+    {
+      "section_id": "E",
+      "q_id": "E.2",
+      "q_text": "Elaborate on the various types of proteins found in living systems, explaining their diverse functions with suitable examples.",
+      "type": "SA",
+      "marks": 5,
+      "difficulty": "Medium",
+      "sources": ["f12e5731-7f2b-5b99-b658-0baa2f4f2e19"]
+    },
+    {
+      "section_id": "E",
+      "q_id": "E.3",
+      "q_text": "Discuss the structure of a typical dicotyledonous flower with a well-labelled diagram. Mention the functions of its main parts.",
+      "type": "SA",
+      "marks": 5,
+      "difficulty": "Medium",
+      "sources": ["da62c850-3639-54c8-b875-7f695ca04c93"]
+    },
+    {
+      "section_id": "E",
+      "q_id": "E.4",
+      "q_text": "What are nucleic acids? Describe the structure of DNA, including its major components and how they are arranged.",
+      "type": "SA",
+      "marks": 5,
+      "difficulty": "Hard",
+      "sources": ["f12e5731-7f2b-5b99-b658-0baa2f4f2e19"]
+    },
+    {
+      "section_id": "E",
+      "q_id": "E.5",
+      "q_text": "Describe the various types of blood cells (formed elements) found in human blood. Discuss their specific functions and importance in maintaining homeostasis.",
+      "type": "SA",
+      "marks": 5,
+      "difficulty": "Hard",
+      "sources": ["fbe7bdee-859b-50c7-b3db-f5d444adb023"]
+    }
+  ]
+}

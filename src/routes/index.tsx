@@ -18,6 +18,7 @@ import ForgotPasswordPage from "pages/ForgotPasswordPage";
 import { useEffect } from "react";
 import PricingPage from "pages/PricingPage";
 import DocumentHelperPage from "pages/DocumentHelperPage";
+import QuestionPaperGeneratorPage from "pages/QuestionPaperGeneratorPage";
 import { Helmet } from "react-helmet-async";
 import ResearchServicePage from "components/Service3";
 
@@ -91,6 +92,14 @@ const AppRoutes: React.FC = () => (
         element={
           <ProtectedRoute>
             <ResearchServicePage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/question-paper-generator"
+        element={
+          <ProtectedRoute>
+            <QuestionPaperGeneratorPage />
           </ProtectedRoute>
         }
       />
