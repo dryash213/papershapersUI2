@@ -19,6 +19,7 @@ import { useEffect } from "react";
 import PricingPage from "pages/PricingPage";
 import DocumentHelperPage from "pages/DocumentHelperPage";
 import QuestionPaperGeneratorPage from "pages/QuestionPaperGeneratorPage";
+import ResumeAnalysisPage from "pages/ResumeAnalysisPage";
 import { Helmet } from "react-helmet-async";
 import ResearchServicePage from "components/Service3";
 
@@ -100,6 +101,14 @@ const AppRoutes: React.FC = () => (
         element={
           <ProtectedRoute>
             <QuestionPaperGeneratorPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/resume-analysis"
+        element={
+          <ProtectedRoute>
+            <ResumeAnalysisPage />
           </ProtectedRoute>
         }
       />

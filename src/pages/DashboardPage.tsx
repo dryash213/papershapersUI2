@@ -79,7 +79,7 @@ const DashboardPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-emerald-700">
             Smart Exam Preparation & Research Solutions
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "AI-Powered Exam Generator",
@@ -95,6 +95,14 @@ const DashboardPage = () => {
                   "Upload documents (resumes, study materials, etc.) to receive personalized text outputs with relevant interview questions or chapter tests generated using content analysis and web research integration.",
                 link: "/document-helper",
                 linkText: "Try Document Helper",
+                icon: <CloudArrowUpIcon className="w-10 h-10 text-green-600" />,
+              },
+              {
+                title: "Resume Analysis",
+                description:
+                  "Upload your resume for comprehensive AI-powered analysis. Get detailed feedback on skills, experience, education, and receive personalized recommendations to optimize your resume for better job opportunities.",
+                link: "/resume-analysis",
+                linkText: "Try Resume Analysis",
                 icon: <CloudArrowUpIcon className="w-10 h-10 text-green-600" />,
               },
               {

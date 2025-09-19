@@ -15,7 +15,7 @@ interface QuestionPaperFormProps {
 const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoading }) => {
   const [formData, setFormData] = useState<QuestionPaperRequest>({
     board: 'CBSE',
-    class_name: '',
+    class_label: '',
     subject: ''
   });
 
@@ -30,10 +30,10 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
   ];
 
   const subjectOptions: Record<string, string[]> = {
-    '9': ['Science', 'English-Words and Expressions', 'Sst', 'Maths', 'English-Moments'],
-    '10': ['Science', 'Sst', 'Maths', 'English-First Flight'],
-    '11': ['Chemistry', 'sample paper + mock paper', 'Maths', 'Physics', 'Biology'],
-    '12': ['Chemistry', 'sample paper + mock paper', 'Maths', 'Physics', 'Biology']
+    'Class 9th': ['Science', 'English-Words and Expressions', 'Sst', 'Maths', 'English-Moments'],
+    'Class 10th': ['Science', 'Sst', 'Maths', 'English-First Flight'],
+    'Class 11th': ['Chemistry', 'sample paper + mock paper', 'Maths', 'Physics', 'Biology'],
+    'Class 12th': ['Chemistry', 'sample paper + mock paper', 'Maths', 'Physics', 'Biology']
   };
 
   const handleInputChange = (field: keyof QuestionPaperRequest, value: string) => {
@@ -51,7 +51,7 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
     }
 
     // Reset subject when class changes
-    if (field === 'class_name' && formData.class_name !== value) {
+    if (field === 'class_label' && formData.class_label !== value) {
       setFormData(prev => ({
         ...prev,
         subject: ''
@@ -62,8 +62,8 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
   const validateForm = (): boolean => {
     const newErrors: Partial<QuestionPaperRequest> = {};
 
-    if (!formData.class_name) {
-      newErrors.class_name = 'Please select a class';
+    if (!formData.class_label) {
+      newErrors.class_label = 'Please select a class';
     }
 
     if (!formData.subject) {
@@ -82,7 +82,7 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
     }
   };
 
-  const availableSubjects = formData.class_name ? subjectOptions[formData.class_name] || [] : [];
+  const availableSubjects = formData.class_label ? subjectOptions[formData.class_label] || [] : [];
 
   return (
     <motion.div
@@ -140,9 +140,12 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
           </label>
           <div className="relative">
             <select
-              value={formData.class_name}
-              onChange={(e) => handleInputChange('class_name', e.target.value)}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 ${errors.class_name
+              value={formData.class_label}
+              onChange={(e) => {
+                const selectedOption = classOptions.find(opt => opt.value === e.target.value);
+                handleInputChange('class_label', selectedOption ? selectedOption.label : '');
+              }}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 ${errors.class_label
                 ? 'border-red-500 bg-red-50'
                 : 'border-gray-300 bg-white'
                 }`}
@@ -155,13 +158,13 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
                 </option>
               ))}
             </select>
-            {errors.class_name && (
+            {errors.class_label && (
               <motion.p
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-red-500 text-sm mt-1"
               >
-                {errors.class_name}
+                {errors.class_label}
               </motion.p>
             )}
           </div>
@@ -184,10 +187,10 @@ const QuestionPaperForm: React.FC<QuestionPaperFormProps> = ({ onSubmit, isLoadi
                 ? 'border-red-500 bg-red-50'
                 : 'border-gray-300 bg-white'
                 }`}
-              disabled={isLoading || !formData.class_name}
+              disabled={isLoading || !formData.class_label}
             >
               <option value="">
-                {formData.class_name ? 'Select a subject' : 'Select a class first'}
+                {formData.class_label ? 'Select a subject' : 'Select a class first'}
               </option>
               {availableSubjects.map((subject) => (
                 <option key={subject} value={subject}>

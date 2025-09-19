@@ -4,15 +4,14 @@
  */
 
 import axios from 'axios';
-import mockQuestionPaperDataJson from '../../data/mockQuestionPaperData.json';
 
-// Type the imported JSON data
-const mockQuestionPaperData: QuestionPaperResponse = mockQuestionPaperDataJson as QuestionPaperResponse;
+// Get API base URL from environment variables
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://papershapers-test.up.railway.app';
 
 // Types for the API request and response
 export interface QuestionPaperRequest {
   board: string;
-  class_name: string;
+  class_label: string;
   subject: string;
 }
 
@@ -40,8 +39,6 @@ export interface QuestionPaperResponse {
   questions: Question[];
 }
 
-// Mock data is now imported from JSON file
-
 /**
  * Generate question paper by calling the FastAPI endpoint
  * @param request - The question paper generation request
@@ -51,20 +48,10 @@ export const generateQuestionPaper = async (
   request: QuestionPaperRequest
 ): Promise<QuestionPaperResponse> => {
   try {
-    // For now, we'll use mock data since the API is not available
-    // In production, replace this with actual API call
     console.log('Generating question paper with request:', request);
 
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    // Return mock data for development
-    return mockQuestionPaperData;
-
-    // TODO: Uncomment when API is ready
-    /*
     const response = await axios.post<QuestionPaperResponse>(
-      'http://localhost:8000/generate-paper',
+      `${API_BASE_URL}/generate_full`,
       request,
       {
         headers: {
@@ -75,7 +62,6 @@ export const generateQuestionPaper = async (
     );
     
     return response.data;
-    */
   } catch (error) {
     console.error('Error generating question paper:', error);
 
@@ -93,9 +79,8 @@ export const generateQuestionPaper = async (
       }
     }
 
-    // Fallback to mock data in case of any error
-    console.warn('Using mock data due to API error');
-    return mockQuestionPaperData;
+    // Re-throw any other errors
+    throw new Error(`Unexpected error: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 };
 
@@ -107,10 +92,10 @@ export const generateQuestionPaper = async (
 export const validateQuestionPaperRequest = (request: QuestionPaperRequest): boolean => {
   return !!(
     request.board &&
-    request.class_name &&
+    request.class_label &&
     request.subject &&
     request.board.trim() !== '' &&
-    request.class_name.trim() !== '' &&
+    request.class_label.trim() !== '' &&
     request.subject.trim() !== ''
   );
 };
